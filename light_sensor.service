@@ -1,0 +1,10 @@
+[Unit]
+Description=Detect light fluctuations
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python /boot/bin/light_sensor.py
+Restart=on-abort
+
+[Install]
+WantedBy=network-online.target
